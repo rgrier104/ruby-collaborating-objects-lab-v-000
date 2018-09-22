@@ -27,7 +27,7 @@ class Artist
   end
 
   def self.find_or_create_by_name(name)
-    if @@all.detect{|artist| artist.name == name}
+    if all.detect{|artist| artist.name == name}
     
     else
       self.new(name).save
