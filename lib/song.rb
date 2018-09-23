@@ -16,7 +16,7 @@ class Song
     song_name = filename_array[1]
     song = self.new(song_name)
     artist_name = filename_array[0]
-    song.artist = artist_name
+    song.artist = Artist.find_or_create_by_name(artist_name)
     song
   end
 
